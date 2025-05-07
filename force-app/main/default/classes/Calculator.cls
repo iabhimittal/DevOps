@@ -17,4 +17,15 @@ public with sharing class Calculator {
         }
         return a/b;
     }
+    public integar mod(integar a, integar b){
+        if(b == 0){
+            throw new DivideByZeroException('Division by zero is not allowed');
+        }
+        return a%b;
+    }
+    public class DivideByZeroException extends Exception {
+        public DivideByZeroException(String message) {
+            super(message);
+        }
+    }
 }
